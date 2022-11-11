@@ -22,7 +22,7 @@
                 <h1>Ремонт квартир в типовых домах</h1>
                 <h2>Готовый дизайн-проект, работы и материалы за 3 месяца от 610 т.р.</h2>
                 <div>
-                    <a href="#form">Узнайте о запуске первым</a>
+                    <a href="#form" class="btn">Узнайте о запуске первым</a>
                     <p>Старт весной 2016</p>
                 </div>
             </main>
@@ -94,15 +94,26 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </section>
-    <section>
-        <div class="form">
-            <h2>Узнайте о запуске сервиса первым</h2>
-            <div>
-                <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
-                <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
-            </div>
-            <form id="form"></form>
+    <section class="form">
+        <h2>Узнайте о запуске сервиса первым</h2>
+        <div>
+            <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
+            <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
         </div>
+        <form id="form">
+            <label>
+                <input required placeholder="Имя и фамилия*"/>
+            </label>
+            <label>
+                <input required placeholder="E-mail адрес*"/>
+            </label>
+            <label>
+                <input required placeholder="Телефон"/>
+            </label>
+            <a href="#" class="btn">Подписаться</a>
+        </form>
+        <p>* Обязательные для заполнения поля</p>
+        <a href="#">Политика конфиденциальности</a>
     </section>
     <section class="footer" id="contacts">
         <div>
