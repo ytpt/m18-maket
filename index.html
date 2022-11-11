@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
@@ -47,47 +48,60 @@
             </main>
         </div>
     </section>
-    <section class="after-main">
-        <div>
-            <div>
+    <section class="after-main" id="down">
+        <div class="after-main-info">
+            <div class="easy">
                 <h2>FIX Ремонт — это легко</h2>
                 <h4>Готовые проекты, проверенные материалы и умелые руки</h4>
             </div>
-            <div>
-                <div>
-                    <h3>Опытная команда</h3>
-                    <p>Команда проектировщиков и строителей со стажем работы более 6 лет</p>
-                </div>
-                <div>
-                    <h3>Типовые дизайн-проекты</h3>
-                    <p>Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг</p>
-                </div>
+            <div class="team">
+                <h3>Опытная команда</h3>
+                <p>Команда проектировщиков и строителей со стажем работы более 6 лет</p>
             </div>
-            <div>
-                <div>
-                    <h3>Фиксированная смета</h3>
-                    <p>Никаких дополнительных расходов во время ремонта. Расчет стоимости при заключении договора</p>
-                </div>
-                <div>
-                    <h3>Срок работ</h3>
-                    <p>3 месяца</p>
-                </div>
+            <div class="projects">
+                <h3>Типовые дизайн-проекты</h3>
+                <p>Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг</p>
+            </div>
+            <div class="estimate">
+                <h3>Фиксированная смета</h3>
+                <p>Никаких дополнительных расходов во время ремонта. Расчет стоимости при заключении договора</p>
+            </div>
+            <div class="deadline">
+                <h3>Срок работ</h3>
+                <p>3 месяца</p>
             </div>
         </div>
-        <div>
-            <h2>FIX Ремонт — это легко</h2>
-            <h4>Готовые проекты, проверенные материалы и умелые руки</h4>
-            <slider></slider>
-        </div>
-        <div>
-            <div>
-                <h2>Узнайте о запуске сервиса первым</h2>
-                <div>
-                    <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
-                    <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
-                </div>
-                <form id="form"></form>
+    </section>
+    <section class="slider-header">
+        <h2>3 стиля интерьера</h2>
+        <h4>Скандинавский, классический и эко-стиль</h4>
+    </section>
+    <section class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                <p>Кафельная плитка<br/>в ванной комнате в скандинавском стиле</p>
             </div>
+            <div class="swiper-slide">
+                <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                <p>Кафельная плитка в ванной комнате в скандинавском стиле</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                <p>Кафельная плитка в ванной комнате в скандинавском стиле</p>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <section>
+        <div class="form">
+            <h2>Узнайте о запуске сервиса первым</h2>
+            <div>
+                <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
+                <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
+            </div>
+            <form id="form"></form>
         </div>
     </section>
     <section class="footer" id="contacts">
@@ -112,8 +126,9 @@
                 <h5>9035445@gmail.com</h5>
             </a>
         </div>
-        <p id="down">© FIX Ремонт, 2016</p>
+        <p>© FIX Ремонт, 2016</p>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

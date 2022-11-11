@@ -19,7 +19,6 @@ body
 {
     top: 0;
     left: 0;
-    width: 100%;
     font-family: "MullerMedium", sans-serif;
     font-size: 16px;
     color: #000;
@@ -187,3 +186,178 @@ a
     font-size: 21px;
     padding-top: 19px;
 }
+
+.after-main-info,
+.slider-header
+{
+    max-width: 984px;
+    margin: 0 auto;
+}
+
+.after-main
+{
+    padding: 166px 0 184px 0;
+}
+
+.after-main-info
+{
+    display: grid;
+    column-gap: 80px;
+    grid-template-areas:
+        "easy easy"
+        "team projects"
+        "estimate deadline";
+}
+
+.after-main-info h2,
+.slider-header > h2,
+.form > h2
+{
+    font-size: 40px;
+    line-height: 125%;
+}
+
+.after-main-info h3
+{
+    font-size: 24px;
+    line-height: 133%;
+}
+
+.after-main-info h4,
+.slider-header > h4,
+.form h4
+{
+    line-height: 150%;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.after-main-info h4,
+.slider-header > h4
+{
+    color: #33B5A3;
+}
+
+.team,
+.projects,
+.estimate,
+.deadline
+{
+    max-width: 450px;
+}
+
+.team,
+.projects,
+.estimate
+{
+    padding-top: 33px;
+    border-top: 4px solid #63D2C1;
+}
+
+.team > p,
+.projects > p,
+.estimate > p
+{
+    line-height: 24px;
+    color: #666;
+    padding-top: 12px;
+}
+
+.easy,
+.team,
+.projects,
+.estimate,
+.deadline {
+    padding-bottom: 63px;
+}
+
+.team > h3,
+.projects > h3,
+.estimate > h3,
+.deadline > p
+{
+    letter-spacing: -0.05px;
+}
+
+.easy
+{
+    grid-area: easy;
+}
+.team
+{
+    grid-area: team;
+}
+.projects
+{
+    grid-area: projects;
+}
+.estimate
+{
+    grid-area: estimate;
+}
+.deadline
+{
+    grid-area: deadline;
+    text-align: center;
+    border: 4px solid #63D2C1;
+    padding: 39px 90px 42px 90px;
+}
+
+.after-main-info h2,
+.deadline > h3
+{
+    letter-spacing: -0.1px;
+}
+
+.deadline > p
+{
+    font-size: 64px;
+    line-height: 94%;
+}
+
+.swiper
+{
+    width:100%;
+    height: auto;
+    padding: 52px 0 137px 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next
+{
+    top: 75%;
+    color:#F9572E;
+}
+
+.swiper > .swiper-button-prev
+{
+    left: 70%;
+}
+
+.swiper-button-next
+{
+    right: 26%;
+}
+
+.swiper-slide
+{
+    max-width: 912px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.swiper-slide > p
+{
+    max-width: 130px;
+    font-size: 13px;
+    line-height: 154%;
+    color: #666;
+}
+
+/*.swiper-button-prev*/
+/*{*/
+/*    left: 0;*/
+/*    right: 60px;*/
+/*}*/
