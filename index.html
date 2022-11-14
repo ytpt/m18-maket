@@ -97,24 +97,26 @@
 </section>
 <section class="form">
     <h2>Узнайте о запуске сервиса первым</h2>
-    <div>
+    <div class="form-header">
         <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
         <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
     </div>
     <form id="form">
         <label>
-            <input required placeholder="Имя и фамилия*"/>
+            <input placeholder="Имя и фамилия*" required/>
         </label>
         <label>
-            <input required placeholder="E-mail адрес*"/>
+            <input placeholder="E-mail адрес*" required/>
         </label>
         <label>
-            <input required placeholder="Телефон"/>
+            <input placeholder="Телефон"/>
         </label>
-        <a href="#" class="btn">Подписаться</a>
+        <button type="submit" class="btn">Подписаться</button>
     </form>
-    <p>* Обязательные для заполнения поля</p>
-    <a href="#">Политика конфиденциальности</a>
+    <div class="form-footer">
+        <p>* Обязательные для заполнения поля</p>
+        <a href="#" onclick="return false">Политика конфиденциальности</a>
+    </div>
 </section>
 <section class="footer" id="contacts">
     <div class="social">
