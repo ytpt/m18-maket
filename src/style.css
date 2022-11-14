@@ -99,7 +99,7 @@ a
 
 .info > main > h2,
 .video > header > a > p,
-.video > main p
+.video > main > a > p
 {
     font-size: 21px;
 }
@@ -156,7 +156,8 @@ a
 .team > p,
 .projects > p,
 .estimate > p,
-.swiper-slide > p
+.swiper-slide > p,
+.footer > p
 
 {
     color: #666;
@@ -166,7 +167,8 @@ a
 .after-main-info h4,
 .slider-header > h4,
 .form h4,
-.form > div > h4
+.form > div > h4,
+.footer > p
 
 {
     line-height: 150%;
@@ -212,12 +214,29 @@ a
     padding: 39px 89px 217px 0;
 }
 
-.video > header > a > img
+.contacts > img
 {
     padding-right: 9px;
 }
 
-.video > header > a > p
+.contacts > p,
+.info > main > h2,
+.info > main > div > p,
+.video > main > a > p,
+.team > p,
+.projects > p,
+.estimate > p,
+.swiper-slide > p,
+.form > div > h4,
+.form > form > label > input,
+.form > p,
+.form > a,
+.footer
+{
+    font-family: "MullerRegular", sans-serif;
+}
+
+.contacts > p
 {
     line-height: 25px;
     color: #000;
@@ -418,6 +437,7 @@ a
     position: relative;
     max-width: 984px;
     padding: 20px 0 60px 0;
+    margin-bottom: 134px;
 }
 
 .form > h2
@@ -470,5 +490,111 @@ a
 
 .footer
 {
-    padding-top: 134px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F2F2F2;
+    padding-top: 73px;
+}
+
+.footer > p
+{
+    text-align: center;
+}
+
+.footer > .social > a
+{
+    margin-right: 31px;
+}
+
+.footer > .social > a > img
+{
+    width: 20px;
+    height: 20px;
+    background: #F9572E;
+    padding: 15px;
+}
+
+.footer > .social > a:hover > img
+{
+    background: #FF7B59;
+    cursor: pointer;
+}
+
+.footer > h5
+{
+    font-size: 21px;
+    line-height: 124%;
+    padding: 26px 0 5px 0;
+    letter-spacing: -0.01px;
+}
+
+.footer > p
+{
+    width: 440px;
+    margin: 0 auto;
+    padding: 32px 0 29px 0;
+}
+
+.contacts-block
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 72px;
+}
+
+.contacts-block > a
+{
+    display: flex;
+}
+
+.contacts-block > a > img
+{
+    padding-right: 10px;
+}
+
+.contacts-block > a > h5
+{
+    font-size: 21px;
+    line-height: 143%;
+    letter-spacing: -0.1px;
+    color: #000;
+}
+
+.contacts-block > div
+{
+    padding: 0 97px 0 124px;
+    text-align: center;
+}
+
+.contacts-block > div > h5
+{
+    font-size: 21px;
+    line-height: 143%;
+    letter-spacing: -0.1px;
+}
+
+.contacts-block > div > p
+{
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.00761905px;
+    color: #666;
+}
+
+.contacts-block > a:nth-child(3) > h5
+{
+    border-bottom: 2px solid #F9572E;
+}
+
+.copyright > p
+{
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: -0.00761905px;
+    background: #F2F2F2;
+    color: #666;
+    padding: 32px 0 29px 0;
+    border-top: 1px solid #CCCCCC;
 }
