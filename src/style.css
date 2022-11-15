@@ -189,6 +189,7 @@ a, button
 .projects > p,
 .estimate > p,
 .swiper-slide > p,
+.form > form input::placeholder,
 .footer > p,
 .form-footer,
 .contacts-block > div > p,
@@ -265,6 +266,8 @@ a, button
 .swiper-slide > p,
 .form-header > h4,
 .form > form > label > input,
+.form > form input::placeholder,
+.form-footer,
 .footer
 {
     font-family: "MullerRegular", sans-serif;
@@ -315,10 +318,15 @@ a, button
     line-height: 125%;
 }
 
+.after-main-info h3,
+.form > form input::placeholder
+{
+    line-height: 133%;
+}
+
 .after-main-info h3
 {
     font-size: 24px;
-    line-height: 133%;
 }
 
 .after-main-info h4,
@@ -514,11 +522,23 @@ form
     padding-top: 51px;
 }
 
-.form > form input
+form input
 {
     width: 500px;
-    padding: 19px;
     margin-bottom: 30px;
+    padding: 19px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.form > form input::placeholder
+{
+    font-size: 18px;
+}
+
+.input-error
+{
+    border: 2px solid #FA9685;
 }
 
 form > button
