@@ -102,15 +102,35 @@
         <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
     </div>
     <form id="form">
-        <label>
-            <input placeholder="Имя и фамилия*" class="required" type="text"/>
-        </label>
-        <label>
-            <input placeholder="E-mail адрес*" class="required" type="email"/>
-        </label>
-        <label>
-            <input placeholder="Телефон" type="tel"/>
-        </label>
+        <div class="text-field text-field_floating-2">
+            <input
+                placeholder="Имя и фамилия*"
+                id="name"
+                class="required text-field__input"
+                type="text"
+                name="name"
+            />
+            <label class="text-field__label" for="name">Имя и фамилия*</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            <input
+                placeholder="E-mail адрес*"
+                id="email"
+                class="required text-field__input"
+                type="email"
+                name="email"
+            />
+            <label class="text-field__label" for="email">E-mail адрес*</label>
+        </div>
+        <div class="text-field text-field_floating-2">
+            <input
+                placeholder="Телефон"
+                class="text-field__input"
+                type="tel"
+                name="tel"
+            />
+            <label class="text-field__label" for="tel">Телефон</label>
+        </div>
         <button type="submit" class="btn">Подписаться</button>
     </form>
     <div class="form-footer">

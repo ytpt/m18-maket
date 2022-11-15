@@ -189,7 +189,7 @@ a, button
 .projects > p,
 .estimate > p,
 .swiper-slide > p,
-.form > form input::placeholder,
+.text-field,
 .footer > p,
 .form-footer,
 .contacts-block > div > p,
@@ -266,7 +266,7 @@ a, button
 .swiper-slide > p,
 .form-header > h4,
 .form > form > label > input,
-.form > form input::placeholder,
+.text-field,
 .form-footer,
 .footer
 {
@@ -319,7 +319,7 @@ a, button
 }
 
 .after-main-info h3,
-.form > form input::placeholder
+.text-field
 {
     line-height: 133%;
 }
@@ -529,16 +529,61 @@ form input
     padding: 19px;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
+    outline:none;
+}
+.input-error
+{
+    border: 2px solid #FA9685;
 }
 
-.form > form input::placeholder
+
+.text-field
 {
     font-size: 18px;
 }
 
-.input-error
+.text-field__input:focus
 {
     border: 2px solid #FA9685;
+}
+
+.text-field__input:disabled,
+.text-field__input[readonly] {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
+
+.text-field_floating-2 {
+    position: relative;
+}
+
+.text-field_floating-2 .text-field__label {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    display: flex;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: none;
+    background-color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+}
+
+.text-field_floating-2 .text-field__input::-moz-placeholder {
+    color: transparent;
+}
+
+.text-field_floating-2 .text-field__input::placeholder {
+    color: transparent;
+}
+
+.text-field_floating-2 .text-field__input:focus~.text-field__label,
+.text-field_floating-2 .text-field__input:not(:placeholder-shown)~.text-field__label {
+    top: 0;
+    transform: translateY(-50%) scale(0.75);
+    color: #F9572E;
 }
 
 form > button
