@@ -1,12 +1,10 @@
 {
-  "dependencies": {
-    "g": "^2.0.1",
-    "gulp-cli": "^2.3.0",
-    "gulp-css-nbd": "^2.0.0"
-  },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.19",
     "postcss-closest": "^1.0.0"
+  },
+  "dependencies": {
+    "gulp-css-nbd": "^2.0.0"
   }
 }
