@@ -21,7 +21,7 @@ const moveSlide = function()
 {
     rest = lineWidth - sliderWidth - ( offset + widthArray[step] );
 
-    if (rest >= 0)
+    if ( rest >= 0 )
     {
         offset = offset + widthArray[step];
         line.style.left = -offset + 'px';
@@ -53,7 +53,7 @@ const form = document.getElementById( 'form' );
 const formHeader = document.querySelector( '.form-header' );
 const formFooter = document.querySelector( '.form-footer' );
 
-form.addEventListener( 'submit', function(e)
+form.addEventListener( 'submit', function( e )
 {
     e.preventDefault();
 
@@ -68,7 +68,7 @@ form.addEventListener( 'submit', function(e)
         {
             input.classList.remove( 'input-error' );
         }
-    })
+    } );
 
     if ( requiredInputs[0].value !== ''
         && requiredInputs[1].value !== '' )
@@ -82,23 +82,39 @@ form.addEventListener( 'submit', function(e)
             <img src='assets/success.svg' alt='Успешно' width='194' height='128'/>
             <p>Спасибо! Мы будем держать вас в курсе обновлений</p>
         `;
-        form.replaceWith(success);
+        form.replaceWith( success );
     }
-})
+} );
 
-//  gulp-css-nbd
+//  postcss-closest
 var gulp = require( 'gulp' );
+var sourcemaps = require( 'gulp-sourcemaps' );
+
 var cssNdb = require( 'gulp-css-nbd' );
 var concat = require( 'gulp-concat' );
 
+var postcss = require( 'gulp-postcss' );
+var precss = require( 'precss' );
+var autoprefixer = require( 'autoprefixer' );
+var closest = require( 'postcss-closest' );
+
 gulp.task(
-    'default',
+    'styles',
     function ()
     {
+        var precssOptions = {
+            extension: 'pcss',
+            // Текущая версия postcss-partial-import в PreCSS не поддерживает `dirs`
+            dirs: ['./styles/src/_globals/']
+        };
+
         gulp.src( './styles/src/**/*.pcss' )
+            // .pipe( sourcemaps.init() )
+            // gulp-css-nbd в настоящий момент не работает с sourcemaps
             .pipe( cssNdb() )
+            .pipe( postcss( [precss( precssOptions ), closest, autoprefixer] ) )
             .pipe( concat( 'common.css' ) )
-            // Some processing (PostCSS, LESS, SCSS or any other with nesting and &)
+            // .pipe( sourcemaps.write( '.' ) )
             .pipe( gulp.dest( './styles/' ) );
     }
 );
