@@ -4,7 +4,7 @@ Site for "FIX Ремонт" company. Gives information about company and it`s se
 
 ## Installing / Getting started
 ```shell
-npm init
+npm run build
 ```
 
 You will see the plug page of the site.
@@ -24,5 +24,7 @@ the project further:
 ```shell
 git clone https://github.com/ytpt/m18-maket.git
 cd m18-maket
-packagemanager install
+npm install
+npm run dev
+npm run build
 ```
