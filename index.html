@@ -14,43 +14,43 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-<section class="main">
-    <div class="info">
-        <header>
+<header>
+    <section class="info">
+        <div>
             <a><img src="assets/logotype.png" alt="FIX Ремонт" width="200" height="55"/></a>
-        </header>
-        <main>
+        </div>
+        <div class="info-block">
             <h1>Ремонт квартир в типовых домах</h1>
             <h2>Готовый дизайн-проект, работы и материалы за 3 месяца от 610 т.р.</h2>
             <div>
                 <a href="#form" class="btn">Узнайте о запуске первым</a>
                 <p>Старт весной 2016</p>
             </div>
-        </main>
-        <footer>
+        </div>
+        <div class="down">
             <a href="#down">
                 <img src="assets/arrows.svg" alt="Вниз" width="41" height="30"/>
                 <p>Листайте вниз,<br/>чтобы ничего не упустить</p>
             </a>
-        </footer>
-    </div>
-    <div class="video">
-        <header>
+        </div>
+    </section>
+    <section class="video">
+        <div class="video-btn">
             <a href="#contacts" class="contacts">
                 <img src="assets/phone.svg" alt="Контакты"/>
                 <p>Контакты</p>
             </a>
-        </header>
-        <main>
+        </div>
+        <div class="video-block">
             <a>
                 <img src="assets/play.svg" alt="Включить" width="250" height="250"/>
                 <p>Смотреть видео</p>
             </a>
-        </main>
-    </div>
-</section>
-<section class="after-main" id="down">
-    <div class="after-main-info">
+        </div>
+    </section>
+</header>
+<main id="down">
+    <section class="main-block">
         <div class="easy">
             <h2>FIX Ремонт — это легко</h2>
             <h4>Готовые проекты, проверенные материалы и умелые руки</h4>
@@ -71,74 +71,77 @@
             <h3>Срок работ</h3>
             <p>3 месяца</p>
         </div>
-    </div>
-</section>
-<section class="slider-header">
-    <h2>3 стиля интерьера</h2>
-    <h4>Скандинавский, классический и эко-стиль</h4>
-</section>
-<section class="swiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="assets/slide1.png" alt="Дизайн интерьера"/>
-            <p>Кафельная плитка<br/>в ванной комнате в скандинавском стиле</p>
+    </section>
+    <section>
+        <div class="slider-title">
+            <h2>3 стиля интерьера</h2>
+            <h4>Скандинавский, классический и эко-стиль</h4>
         </div>
-        <div class="swiper-slide">
-            <img src="assets/slide1.png" alt="Дизайн интерьера"/>
-            <p>Кафельная плитка в ванной комнате в скандинавском стиле</p>
+        <div class="slider">
+            <div class="line">
+                <div class="slide">
+                    <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                    <p>Кафельная плитка<br/>в ванной комнате<br/>в скандинавском стиле</p>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide1.png" alt="Дизайн интерьера"/>
+                    <p>Кафельная плитка<br/>в ванной комнате<br/>в скандинавском стиле</p>
+                </div>
+            </div>
+            <div class="controls">
+                <img class="btn-prev" src="assets/left.svg" alt="Влево"/>
+                <img class="btn-next" src="assets/right.svg" alt="Вправо"/>
+            </div>
         </div>
-        <div class="swiper-slide">
-            <img src="assets/slide1.png" alt="Дизайн интерьера"/>
-            <p>Кафельная плитка в ванной комнате в скандинавском стиле</p>
+    </section>
+    <section class="form">
+        <h2>Узнайте о запуске сервиса первым</h2>
+        <div class="form-title">
+            <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
+            <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
         </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</section>
-<section class="form">
-    <h2>Узнайте о запуске сервиса первым</h2>
-    <div class="form-header">
-        <img src="assets/door.svg" alt="Дверь" width="46" height="69"/>
-        <h4>Первым 10 клиентам стальная входная дверь в подарок</h4>
-    </div>
-    <form id="form">
-        <div class="text-field text-field_floating-2">
-            <input
-                placeholder="Имя и фамилия*"
-                id="name"
-                class="required text-field__input"
-                type="text"
-                name="name"
-            />
-            <label class="text-field__label" for="name">Имя и фамилия*</label>
+        <form id="form">
+            <div class="text-field text-field_floating-2">
+                <input
+                    placeholder="Имя и фамилия*"
+                    id="name"
+                    class="required text-field__input"
+                    type="text"
+                    name="name"
+                />
+                <label class="text-field__label" for="name">Имя и фамилия*</label>
+            </div>
+            <div class="text-field text-field_floating-2">
+                <input
+                    placeholder="E-mail адрес*"
+                    id="email"
+                    class="required text-field__input"
+                    type="email"
+                    name="email"
+                />
+                <label class="text-field__label" for="email">E-mail адрес*</label>
+            </div>
+            <div class="text-field text-field_floating-2">
+                <input
+                    placeholder="Телефон"
+                    class="text-field__input"
+                    type="tel"
+                    name="tel"
+                />
+                <label class="text-field__label">Email</label>
+            </div>
+            <button type="submit" class="btn">Подписаться</button>
+        </form>
+        <div class="form-footer">
+            <p>* Обязательные для заполнения поля</p>
+            <a href="#" onclick="return false">Политика конфиденциальности</a>
         </div>
-        <div class="text-field text-field_floating-2">
-            <input
-                placeholder="E-mail адрес*"
-                id="email"
-                class="required text-field__input"
-                type="email"
-                name="email"
-            />
-            <label class="text-field__label" for="email">E-mail адрес*</label>
-        </div>
-        <div class="text-field text-field_floating-2">
-            <input
-                placeholder="Телефон"
-                class="text-field__input"
-                type="tel"
-                name="tel"
-            />
-            <label class="text-field__label" for="tel">Телефон</label>
-        </div>
-        <button type="submit" class="btn">Подписаться</button>
-    </form>
-    <div class="form-footer">
-        <p>* Обязательные для заполнения поля</p>
-        <a href="#" onclick="return false">Политика конфиденциальности</a>
-    </div>
-</section>
-<section class="footer" id="contacts">
+    </section>
+</main>
+<footer class="footer" id="contacts">
     <div class="social">
         <a>
             <img src="assets/facebook.svg" alt="Фэйсбук"/>
@@ -166,7 +169,7 @@
             <h5>9035445@gmail.com</h5>
         </a>
     </div>
-</section>
+</footer>
 <section class="copyright">
     <p>© FIX Ремонт, 2016</p>
 </section>

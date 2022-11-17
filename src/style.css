@@ -37,20 +37,20 @@ a, button
     text-decoration: none;
 }
 
-.main,
+header,
 .info
 {
     justify-content: space-between;
 }
 
-.main,
-.info > main > div,
-.after-main-info
+header,
+.info > .info-block > div,
+.main-block
 {
     display: grid;
 }
 
-.main
+header
 {
     min-height: 100%;
     height: 100vh;
@@ -58,13 +58,17 @@ a, button
     padding: 20px;
 }
 
+main
+{
+    padding: 166px 0 134px 0;
+}
+
 .info,
 .video,
-.info > footer > a,
-.video > header > a,
-.swiper-slide,
+.info > .down > a,
+.video > .video-btn > a,
 .form,
-.form-header,
+.form-title,
 .footer,
 .form > form,
 .form-footer,
@@ -92,24 +96,24 @@ a, button
     padding-left: 110px;
 }
 
-.info > main > h2,
-.info > main > div > p,
-.info > footer > a > p
+.info > .info-block > h2,
+.info > .info-block > div > p,
+.info > .down > a > p
 {
     letter-spacing: -0.01px;
 }
 
-.info > main > h2,
-.video > main p,
+.info > .info-block > h2,
+.video > .video-block p,
 .contacts-block > div > h5,
 .contacts-block > a > h5
 {
     line-height: 143%;
 }
 
-.info > main > h2,
-.video > header > a > p,
-.video > main > a > p,
+.info > .info-block > h2,
+.video > .video-btn > a > p,
+.video > .video-block > a > p,
 .contacts-block > div > h5,
 .footer > h5,
 .contacts-block > a > h5
@@ -117,16 +121,16 @@ a, button
     font-size: 21px;
 }
 
-.info > main > h2
+.info > .info-block > h2
 {
     max-width: 480px;
     padding: 27px 0 45px 0;
 }
 
-.info > main > div,
+.info > .info-block > div,
 .video,
 .form,
-.form-header,
+.form-title,
 .footer,
 .contacts-block,
 .success
@@ -134,21 +138,21 @@ a, button
     align-items: center;
 }
 
-.info > main > div
+.info > .info-block > div
 {
     grid-template-columns: 1fr 1fr;
     column-gap: 31px;
 }
 
 .btn,
-.info > footer > a > p
+.info > .down > a > p
 {
     line-height: 112%;
 }
 
 .btn,
 .deadline,
-.video > main,
+.video > .video-block,
 .form > h2,
 .form-footer,
 .footer > p,
@@ -184,11 +188,10 @@ a, button
     box-shadow: 0 15px 20px rgba(249, 87, 46, 0.7);
 }
 
-.info > main > div > p,
+.info > .info-block > div > p,
 .team > p,
 .projects > p,
 .estimate > p,
-.swiper-slide > p,
 .text-field,
 .footer > p,
 .form-footer,
@@ -198,11 +201,11 @@ a, button
     color: #666;
 }
 
-.info > main > div > p,
-.after-main-info h4,
-.slider-header > h4,
+.info > .info-block > div > p,
+.main-block h4,
+.slider-title > h4,
 .form h4,
-.form-header > h4,
+.form-title > h4,
 .footer > p,
 .copyright > p,
 .contacts-block > div > p
@@ -211,28 +214,25 @@ a, button
     line-height: 150%;
 }
 
-.info > footer
+.info > .down
 {
     padding-bottom: 28px;
 }
 
-.info > footer > a,
-.swiper-slide,
+.info > .down > a,
 .contacts-block
 {
     flex-direction: row;
 }
 
-.info > footer > a
+.info > .down > a
 {
     column-gap: 13px;
 }
 
-.info > footer > a > p,
-.video > main p,
-.video > header > a:hover > p,
-.swiper-button-prev,
-.swiper-button-next,
+.info > .down > a > p,
+.video > .video-block p,
+.video > .video-btn > a:hover > p,
 .form-footer > a
 {
     color: #F9572E;
@@ -245,7 +245,7 @@ a, button
     background-repeat: no-repeat;
 }
 
-.video > header
+.video > .video-btn
 {
     align-self: end;
     padding: 39px 89px 217px 0;
@@ -257,14 +257,14 @@ a, button
 }
 
 .contacts > p,
-.info > main > h2,
-.info > main > div > p,
-.video > main > a > p,
+.info > .info-block > h2,
+.info > .info-block > div > p,
+.video > .video-block > a > p,
 .team > p,
 .projects > p,
 .estimate > p,
-.swiper-slide > p,
-.form-header > h4,
+.slide > p,
+.form-title > h4,
 .form > form > label > input,
 .text-field,
 .form-footer,
@@ -285,23 +285,18 @@ a, button
 }
 
 
-.video > main p
+.video > .video-block p
 {
     padding-top: 19px;
 }
 
-.after-main-info,
-.slider-header
+.main-block,
+.slider-title
 {
     max-width: 984px;
 }
 
-.after-main
-{
-    padding: 166px 0 184px 0;
-}
-
-.after-main-info
+.main-block
 {
     column-gap: 80px;
     grid-template-areas:
@@ -310,27 +305,27 @@ a, button
         "estimate deadline";
 }
 
-.after-main-info h2,
-.slider-header > h2,
+.main-block h2,
+.slider-title > h2,
 .form > h2
 {
     font-size: 40px;
     line-height: 125%;
 }
 
-.after-main-info h3,
+.main-block h3,
 .text-field
 {
     line-height: 133%;
 }
 
-.after-main-info h3
+.main-block h3
 {
     font-size: 24px;
 }
 
-.after-main-info h4,
-.slider-header > h4,
+.main-block h4,
+.slider-title > h4,
 .form h4,
 .success
 {
@@ -338,10 +333,16 @@ a, button
     letter-spacing: 0.6px;
 }
 
-.after-main-info h4,
-.slider-header > h4
+.main-block h4,
+.slider-title > h4
 {
+    padding-top: 8px;
     color: #33B5A3;
+}
+
+.slider-title
+{
+    padding-top: 184px;
 }
 
 .team,
@@ -416,7 +417,7 @@ a, button
     padding: 39px 90px 42px 90px;
 }
 
-.after-main-info h2,
+.main-block h2,
 .deadline > h3,
 .contacts-block > div > h5,
 .contacts-block > a > h5
@@ -430,57 +431,84 @@ a, button
     line-height: 94%;
 }
 
-.swiper
-{
-    width:100%;
-    height: auto;
-    padding: 52px 0 137px 0;
+.slider {
+    position: relative;
+    width: 100%;
+    margin: 52px 0 138px 0;
+    overflow: hidden;
 }
 
-.swiper-button-prev,
-.swiper-button-next
+.slider > .line
 {
-    top: 75%;
+    position: relative;
+    display: flex;
+    left: 0;
+    transition: all, ease 1s;
+    /*column-gap: 70px;*/
 }
 
-.swiper > .swiper-button-prev
+.slide
 {
-    left: 70%;
+    display: flex;
+    float: left;
+    column-gap: 18px;
 }
 
-.swiper-button-next
+.slide > p
 {
-    right: 26%;
+    width: 144px;
+    color: #666;
+    font-size: 13px;
+    line-height: 154%;
 }
 
-.swiper-slide
+.controls > img
 {
-    max-width: 912px;
-    justify-content: space-between;
-    padding-right: 50px;
+    position: absolute;
+    bottom: 1%;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.swiper-slide > p,
+.btn-prev,
+.btn-next
+{
+    width: 21px;
+    height: 43px;
+}
+
+.btn-prev:hover,
+.btn-next:hover
+{
+    width: 19px;
+    height: 39px;
+}
+
+.btn-prev
+{
+    right: 23%;
+}
+
+.btn-next
+{
+    right: 20%;
+}
+
 .form-footer > a
 {
     line-height: 154%;
 }
 
-.swiper-slide > p,
 .form-footer
 {
     font-size: 13px;
 }
 
-.swiper-slide > p
-{
-    max-width: 130px;
-}
 
 .form,
 .form > h2,
-.after-main-info,
-.slider-header
+.main-block,
+.slider-title
 
 {
     margin: 0 auto;
@@ -491,7 +519,6 @@ a, button
     position: relative;
     max-width: 984px;
     padding: 20px 0 60px 0;
-    margin-bottom: 134px;
 }
 
 .form > h2
@@ -506,12 +533,12 @@ a, button
     right: 0;
 }
 
-.form-header
+.form-title
 {
     padding-top: 41px;
 }
 
-.form-header > h4
+.form-title > h4
 {
     max-width: 300px;
     padding-left: 21px;
@@ -563,7 +590,6 @@ form input
     left: 2%;
     display: flex;
     transform: translateY(-50%);
-    pointer-events: none;
     border: none;
     background-color: #fff;
     padding-left: 0.5rem;
@@ -665,6 +691,11 @@ form > button
 .contacts-block > a:nth-child(3) > h5
 {
     border-bottom: 2px solid #F9572E;
+}
+
+.contacts-block > a:nth-child(3) > h5:hover
+{
+    color: #F9572E;
 }
 
 .copyright > p
