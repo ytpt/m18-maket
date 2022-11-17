@@ -1,9 +1,9 @@
 //  slider
-const line = document.querySelector('.line');
-const slides = document.querySelectorAll('.slide');
-const sliderWidth = document.querySelector('.slider').offsetWidth;
-const btnPrev = document.querySelector('.btn-prev');
-const btnNext = document.querySelector('.btn-next');
+const line = document.querySelector( '.line' ;
+const slides = document.querySelectorAll( '.slide' );
+const sliderWidth = document.querySelector( '.slider' ).offsetWidth;
+const btnPrev = document.querySelector( '.btn-prev' );
+const btnNext = document.querySelector( '.btn-next' );
 let widthArray = [0];
 let lineWidth = 0;
 let offset = 0;
@@ -49,35 +49,35 @@ btnNext.addEventListener( 'click', moveSlide )
 btnPrev.addEventListener( 'click', moveSlide );
 
 //  form
-const form = document.getElementById('form');
-const formHeader = document.querySelector('.form-header');
-const formFooter = document.querySelector('.form-footer');
+const form = document.getElementById( 'form' );
+const formHeader = document.querySelector( '.form-header' );
+const formFooter = document.querySelector( '.form-footer' );
 
 form.addEventListener( 'submit', function(e)
 {
     e.preventDefault();
 
-    const requiredInputs = form.querySelectorAll('.required');
+    const requiredInputs = form.querySelectorAll( '.required' );
     requiredInputs.forEach( input =>
     {
         if ( input.value == '' )
         {
-            input.classList.add('input-error');
+            input.classList.add( 'input-error' );
         }
         else
         {
-            input.classList.remove('input-error');
+            input.classList.remove( 'input-error' );
         }
     })
 
     if ( requiredInputs[0].value !== ''
         && requiredInputs[1].value !== '' )
     {
-        formHeader.classList.add('hide');
-        formFooter.classList.add('hide');
+        formHeader.classList.add( 'hide' );
+        formFooter.classList.add( 'hide' );
 
-        let success = document.createElement('div');
-        success.classList.add('success');
+        let success = document.createElement( 'div' );
+        success.classList.add( 'success' );
         success.innerHTML = `
             <img src='assets/success.svg' alt='Успешно' width='194' height='128'/>
             <p>Спасибо! Мы будем держать вас в курсе обновлений</p>
@@ -85,3 +85,20 @@ form.addEventListener( 'submit', function(e)
         form.replaceWith(success);
     }
 })
+
+//  gulp-css-nbd
+var gulp = require( 'gulp' );
+var cssNdb = require( 'gulp-css-nbd' );
+var concat = require( 'gulp-concat' );
+
+gulp.task(
+    'default',
+    function ()
+    {
+        gulp.src( './styles/src/**/*.pcss' )
+            .pipe( cssNdb() )
+            .pipe( concat( 'common.css' ) )
+            // Some processing (PostCSS, LESS, SCSS or any other with nesting and &)
+            .pipe( gulp.dest( './styles/' ) );
+    }
+);
